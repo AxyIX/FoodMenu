@@ -1,0 +1,14 @@
+<table ng-controller="TableController" class="table table-striped">
+    <tr>
+        <th>Title</th>
+        <th>Rating</th>
+        <th>Price</th>
+        <th>Image</th>
+    </tr>
+    <tr ng-repeat="item in dataService.getMenuList() track by $index">
+        <td>{{item.title}}</td>
+        <td>{{item.rating}}</td>
+        <td>{{item.price}}</td>
+        <td><img src="{{item.image}}" class="img-thumbnail" width="140"/></td>
+    </tr>
+</table>
