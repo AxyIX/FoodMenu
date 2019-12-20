@@ -1,4 +1,7 @@
-<div ng-controller="HeaderController">
-    <input type="file" onchange="angular.element(this).scope().handleFile(this)">
-    <button ng-click="load()">LOAD</button>
+<div ng-controller="HeaderController" class="app-header">
+    <input type="file" hidden
+           id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"
+           onchange="angular.element(this).scope().handleFile(this)">
+    <label for="inputGroupFile01" class="btn btn-default">Choose file</label>
+    <button class="btn btn-default" ng-click="load()">Upload</button>
 </div>
