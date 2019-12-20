@@ -4,4 +4,15 @@
            onchange="angular.element(this).scope().handleFile(this)">
     <label for="inputGroupFile01" class="btn btn-default">Choose file</label>
     <button class="btn btn-default" ng-click="load()">Upload</button>
+    <div class="input-group">
+        <input placeholder="Filter" type="text" class="form-control" name="filter" ng-model="dataService.filterValue"/>
+    </div>
+    <div class="input-group">
+        <select class="form-control" id="select-filter">
+            <option value="all">All</option>
+            <option value="title">Title</option>
+            <option value="rating">Rating</option>
+            <option value="price">Price</option>
+        </select>
+    </div>
 </div>

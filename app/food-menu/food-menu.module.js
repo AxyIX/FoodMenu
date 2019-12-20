@@ -1,1 +1,1 @@
-angular.module('foodMenu', []);
+angular.module('foodMenu', ['ui.bootstrap']);

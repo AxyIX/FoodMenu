@@ -1,5 +1,6 @@
 'use strict';
 
 angular.module('app', [
-    'foodMenu'
+    'foodMenu',
+    'ui.bootstrap'
 ]);

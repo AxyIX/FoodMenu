@@ -2,16 +2,18 @@
 
 angular
     .module('foodMenu')
-    .factory('foodMenuDataService', function () {
+    .factory('foodMenuDataService', () => {
         var serviceInstance = {};
 
         serviceInstance.menuList = [];
-        serviceInstance.setMenuList = function (list) {
+        serviceInstance.filterValue = '';
+
+        serviceInstance.setMenuList = (list) => {
             serviceInstance.menuList = list;
-        }
-        serviceInstance.getMenuList = function () {
+        };
+        serviceInstance.getMenuList = () => {
             return serviceInstance.menuList
-        }
+        };
 
         return serviceInstance;
-    })
+    });

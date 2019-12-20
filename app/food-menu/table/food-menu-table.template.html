@@ -1,5 +1,5 @@
-<div class="app-table-wrapper">
-    <table ng-controller="TableController" class="table table-striped table-hover table-bordered app-table">
+<div class="app-table-wrapper" ng-controller="TableController">
+    <table class="table table-striped table-hover table-bordered app-table">
         <thead>
         <tr class="app-table-header">
             <th>Title</th>
@@ -9,7 +9,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="item in dataService.getMenuList() track by $index">
+        <tr ng-repeat="item in dataService.getMenuList() | filter:dataService.filterValue">
             <td>{{item.title}}</td>
             <td>{{item.rating}}</td>
             <td>{{item.price}}</td>
