@@ -22,42 +22,45 @@ food-menu {
   overflow: auto;
 }
 
-.app-table {
-  position: relative;
-}
-
 .app-header {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: white;
-  padding: 8px 24px 8px 24px;
+  background-color: #dddddd;
+  padding-top: 8px;
+  padding-bottom: 8px;
   display: flex;
   justify-content: center;
-}
-
-.app-table-wrapper {
-  width: 800px;
-  margin: auto;
-  box-sizing: border-box;
 }
 
 .app-table-header th{
   position: sticky;
   background-color: white;
-  border: 1px solid #ccc;
   top: 46px;
   z-index: 1;
 }
 
 .app-filters-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .app-file-uploader-wrapper {
   display: flex;
   justify-content: flex-end;
+}
+
+.app-table-wrapper {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.app-table {
+  width: 800px;
+}
+
+.app-title-filter {
+  flex: 1;
 }
 
 [hidden] {

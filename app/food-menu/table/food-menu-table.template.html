@@ -1,20 +1,22 @@
-<div class="app-table-wrapper">
-    <table class="table table-striped table-hover table-bordered app-table">
-        <thead>
-        <tr class="app-table-header">
-            <th>Title</th>
-            <th>Rating</th>
-            <th>Price</th>
-            <th>Image</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="item in dataService.getMenuList() | filter:dataService.filterValue track by item.id">
-            <td>{{item.title}}</td>
-            <td>{{item.rating}}</td>
-            <td>{{item.price}}</td>
-            <td><img src="{{item.image}}" class="img-thumbnail" width="140"/></td>
-        </tr>
-        </tbody>
-    </table>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 app-table-wrapper">
+        <table class="table table-striped table-hover app-table">
+            <thead>
+            <tr class="app-table-header">
+                <th>Title</th>
+                <th>Rating</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in dataService.getMenuList() | filter:dataService.filterValue track by item.id">
+                <td>{{item.title}}</td>
+                <td>{{item.rating}}</td>
+                <td>{{item.price}}</td>
+                <td><img src="{{item.image}}" class="img-thumbnail" width="140"/></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
