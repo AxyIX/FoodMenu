@@ -12,7 +12,12 @@ function foodMenuHeaderCtrl($scope, foodMenuDataService) {
         title: '',
         rating: '',
         price: ''
-    }
+    };
+    this.clearFilters = function () {
+        $scope.filter.title = '';
+        $scope.filter.rating = '';
+        $scope.filter.price = '';
+    };
     this.handleFile = function (file) {
         foodMenuDataService.setMenuList(file);
     }

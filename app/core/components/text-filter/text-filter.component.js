@@ -10,5 +10,4 @@ angular.module('appComponents').component('textFilter', {
 });
 
 function textFilterCtrl($scope) {
-
 }

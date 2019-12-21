@@ -4,7 +4,7 @@
            class="form-control" name="{{'text-filter-' + $ctrl.label}}" id="{{'text-filter-' + $ctrl.label}}"
            ng-model="$ctrl.value"/>
     <span class="input-group-btn">
-        <button class="btn btn-default" type="button">
+        <button class="btn btn-default" type="button" ng-click="$ctrl.value = ''">
             <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
         </button>
       </span>
