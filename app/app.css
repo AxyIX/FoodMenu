@@ -20,23 +20,25 @@ food-menu {
   height: 100%;
   width: 100%;
   overflow: auto;
+  background-color: #efefef;
 }
 
 .app-header {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #dddddd;
+  background-color: #dfdfdf;
   padding-top: 8px;
   padding-bottom: 8px;
   display: flex;
   justify-content: center;
+  height: 50px;
 }
 
 .app-table-header th{
   position: sticky;
   background-color: white;
-  top: 46px;
+  top: 51px;
   z-index: 1;
 }
 
@@ -50,17 +52,15 @@ food-menu {
   justify-content: flex-end;
 }
 
-.app-table-wrapper {
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
 .app-table {
   width: 800px;
 }
 
 .app-title-filter {
   flex: 1;
+}
+
+.app-table-wrapper {
 }
 
 [hidden] {
