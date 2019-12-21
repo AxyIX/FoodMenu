@@ -1,11 +1,13 @@
-<div class="app-header">
-    <json-file-uploader on-file-load="$ctrl.handleFile(file)"></json-file-uploader>
-    <div class="app-filters-wrapper">
+<div class="app-header row">
+    <div class="col-md-3 app-file-uploader-wrapper">
+        <json-file-uploader on-file-load="$ctrl.handleFile(file)"></json-file-uploader>
+    </div>
+    <div class="col-md-8 app-filters-wrapper">
         <text-filter label="'Title'" value="filter.title"></text-filter>
         <text-filter label="'Rating'" value="filter.rating"></text-filter>
         <text-filter label="'Price'" value="filter.price"></text-filter>
     </div>
-    <div class="btn-group btn-group-sm">
+    <div class="col-md-3 btn-group btn-group-sm">
         <button type="button" class="btn btn-success">Search</button>
         <button type="button" class="btn btn-warning">Clear</button>
     </div>

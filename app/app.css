@@ -33,6 +33,7 @@ food-menu {
   background-color: white;
   padding: 8px 24px 8px 24px;
   display: flex;
+  justify-content: center;
 }
 
 .app-table-wrapper {
@@ -51,6 +52,12 @@ food-menu {
 
 .app-filters-wrapper {
   display: flex;
+  justify-content: center;
+}
+
+.app-file-uploader-wrapper {
+  display: flex;
+  justify-content: flex-end;
 }
 
 [hidden] {
