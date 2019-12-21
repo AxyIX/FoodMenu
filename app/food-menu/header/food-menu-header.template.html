@@ -1,18 +1,12 @@
-<div ng-controller="HeaderController" class="app-header">
-    <input type="file" hidden
-           id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"
-           onchange="angular.element(this).scope().handleFile(this)">
-    <label for="inputGroupFile01" class="btn btn-default">Choose file</label>
-    <button class="btn btn-default" ng-click="load()">Upload</button>
-    <div class="input-group">
-        <input placeholder="Filter" type="text" class="form-control" name="filter" ng-model="dataService.filterValue"/>
+<div class="app-header">
+    <json-file-uploader on-file-load="$ctrl.handleFile(file)"></json-file-uploader>
+    <div class="app-filters-wrapper">
+        <text-filter label="'Title'" value="filter.title"></text-filter>
+        <text-filter label="'Rating'" value="filter.rating"></text-filter>
+        <text-filter label="'Price'" value="filter.price"></text-filter>
     </div>
-    <div class="input-group">
-        <select class="form-control" id="select-filter">
-            <option value="all">All</option>
-            <option value="title">Title</option>
-            <option value="rating">Rating</option>
-            <option value="price">Price</option>
-        </select>
+    <div class="btn-group btn-group-sm">
+        <button type="button" class="btn btn-success">Search</button>
+        <button type="button" class="btn btn-warning">Clear</button>
     </div>
 </div>

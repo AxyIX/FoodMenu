@@ -31,20 +31,26 @@ food-menu {
   top: 0;
   z-index: 1;
   background-color: white;
+  padding: 8px 24px 8px 24px;
   display: flex;
 }
 
 .app-table-wrapper {
   width: 800px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .app-table-header th{
   position: sticky;
   background-color: white;
   border: 1px solid #ccc;
-  top: 34px;
+  top: 46px;
   z-index: 1;
+}
+
+.app-filters-wrapper {
+  display: flex;
 }
 
 [hidden] {

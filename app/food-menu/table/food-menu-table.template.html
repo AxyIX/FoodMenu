@@ -1,4 +1,4 @@
-<div class="app-table-wrapper" ng-controller="TableController">
+<div class="app-table-wrapper">
     <table class="table table-striped table-hover table-bordered app-table">
         <thead>
         <tr class="app-table-header">
@@ -9,7 +9,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="item in dataService.getMenuList() | filter:dataService.filterValue">
+        <tr ng-repeat="item in dataService.getMenuList() | filter:dataService.filterValue track by item.id">
             <td>{{item.title}}</td>
             <td>{{item.rating}}</td>
             <td>{{item.price}}</td>

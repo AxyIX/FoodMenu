@@ -1,1 +1,4 @@
-angular.module('foodMenu', ['ui.bootstrap']);
+angular.module('foodMenu', [
+    'appCore',
+    'ui.bootstrap'
+]);

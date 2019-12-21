@@ -1,9 +1,7 @@
 'use strict';
 
-angular
-    .module('foodMenu')
-    .factory('foodMenuDataService', () => {
-        var serviceInstance = {};
+angular.module('foodMenu').factory('foodMenuDataService', () => {
+        const serviceInstance = {};
 
         serviceInstance.menuList = [];
         serviceInstance.filterValue = '';
