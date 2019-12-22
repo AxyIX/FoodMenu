@@ -1,8 +1,4 @@
-'use strict';
-
-let foodMenu = angular.module('foodMenu');
-
-foodMenu.component('foodMenuHeader', {
+angular.module('foodMenu').component('foodMenuHeader', {
     templateUrl: 'food-menu/header/food-menu-header.template.html',
     controller: foodMenuHeaderCtrl
 });
@@ -19,17 +15,17 @@ function foodMenuHeaderCtrl($scope, foodMenuDataService, localStorageService) {
         };
     }
 
-    this.clearFilters = () => {
+    this.clearFilters = function() {
         $scope.filter.title = '';
         $scope.filter.rating = '';
         $scope.filter.price = '';
         this.filter();
     };
-    this.handleFile = (file) => {
+    this.handleFile = function(file) {
         foodMenuDataService.setMenuList(file);
         this.filter();
     };
-    this.filter = () => {
+    this.filter = function() {
         localStorageService.addToStorage('headerFilter' ,$scope.filter);
         foodMenuDataService.setFilter({...$scope.filter});
     }

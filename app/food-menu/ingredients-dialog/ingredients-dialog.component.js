@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('foodMenu').component('ingredientsDialog', {
     templateUrl: 'food-menu/ingredients-dialog/ingredients-dialog.template.html',
     bindings: {
@@ -11,7 +9,7 @@ angular.module('foodMenu').component('ingredientsDialog', {
 
 function ingredientsDialogCtrl() {
     const ctrl = this;
-    ctrl.$onInit = () => {
+    ctrl.$onInit = function() {
         ctrl.title = ctrl.resolve.title;
         ctrl.ingredients = ctrl.resolve.ingredients;
     };

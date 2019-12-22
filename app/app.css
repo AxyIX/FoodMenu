@@ -1,3 +1,5 @@
+/* main <----------------------*/
+
 html {
   height: 100%;
   width: 100%;
@@ -23,6 +25,8 @@ food-menu {
   overflow-x: hidden;
 }
 
+/*  header <----------------------*/
+
 .app-header {
   position: sticky;
   top: 0;
@@ -34,6 +38,30 @@ food-menu {
   justify-content: center;
   height: 46px;
   margin-bottom: -2px;
+}
+
+.app-filters-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-filters-wrapper :not(:last-child) {
+  margin-right: 10px;
+}
+
+.app-file-uploader-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.app-title-filter {
+  flex: 1;
+}
+
+/* table <----------------------*/
+
+.app-table {
+  width: 800px;
 }
 
 .app-table-header th{
@@ -53,29 +81,6 @@ food-menu {
   cursor: pointer;
 }
 
-.app-filters-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.app-filters-wrapper :not(:last-child) {
-  margin-right: 10px;
-}
-
-.app-file-uploader-wrapper {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.app-table {
-  width: 800px;
-  border-top: none;
-}
-
-.app-title-filter {
-  flex: 1;
-}
-
 .app-table-wrapper {
 }
 
@@ -83,6 +88,8 @@ food-menu {
   cursor: pointer;
   text-decoration: underline;
 }
+
+/* other <----------------------*/
 
 .app-modal-content {
   max-height: 300px;

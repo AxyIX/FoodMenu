@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('appComponents').component('sortIcon', {
     templateUrl: 'core/components/sort-icon/sort-icon.template.html',
     bindings: {
@@ -9,10 +7,4 @@ angular.module('appComponents').component('sortIcon', {
 });
 
 function sortIconCtrl() {
-    this.getOrder = function () {
-        if (order) {
-            return order;
-        }
-        return '';
-    }
 }
