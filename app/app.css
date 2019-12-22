@@ -39,6 +39,7 @@ food-menu {
   position: sticky !important;
   background-color: white;
   top: 47px;
+  height: 37px;
   z-index: 1;
   user-select: none;
   -moz-user-select: none;
@@ -74,6 +75,16 @@ food-menu {
 }
 
 .app-table-wrapper {
+}
+
+.app-food-title {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.app-modal-content {
+  max-height: 300px;
+  overflow: auto;
 }
 
 [hidden] {

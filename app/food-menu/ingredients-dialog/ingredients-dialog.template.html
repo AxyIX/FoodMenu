@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">{{$ctrl.title}} ingredients</h3>
+</div>
+<div class="modal-body app-modal-content" id="modal-body">
+    <ul>
+        <li ng-repeat="item in $ctrl.ingredients track by $index">{{item}}</li>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-success" type="button" ng-click="$ctrl.ok()">OK</button>
+</div>
