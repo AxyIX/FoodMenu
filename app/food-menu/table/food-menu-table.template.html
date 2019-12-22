@@ -4,10 +4,19 @@
         <table class="table table-striped table-hover app-table">
             <thead>
             <tr class="app-table-header">
-                <th ng-click="setOrderBy('title')">Title</th>
-                <th ng-click="setOrderBy('price')">Price</th>
-                <th ng-click="setOrderBy('rating')">Rating</th>
-                <th>Image</th>
+                <th class="col-md-8 app-column-sortable" ng-click="setOrderBy('title')">
+                    Title
+                    <sort-icon order="order" ng-show="order.includes('title')"></sort-icon>
+                </th>
+                <th class="col-md-1 app-column-sortable" ng-click="setOrderBy('price')">
+                    Price
+                    <sort-icon order="order" ng-show="order.includes('price')"></sort-icon>
+                </th>
+                <th class="col-md-1 app-column-sortable" ng-click="setOrderBy('rating')">
+                    Rating
+                    <sort-icon order="order" ng-show="order.includes('rating')"></sort-icon>
+                </th>
+                <th class="col-md-2">Image</th>
             </tr>
             </thead>
             <tbody>

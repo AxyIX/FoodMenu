@@ -36,10 +36,19 @@ food-menu {
 }
 
 .app-table-header th{
-  position: sticky;
+  position: sticky !important;
   background-color: white;
   top: 51px;
   z-index: 1;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.app-column-sortable:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .app-filters-wrapper {
