@@ -1,1 +1,1 @@
-angular.module('appCore', ['appComponents']);
+angular.module('appCore', ['appComponents', 'appServices']);

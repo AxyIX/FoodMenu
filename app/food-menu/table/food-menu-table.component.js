@@ -5,9 +5,15 @@ angular.module('foodMenu').component('foodMenuTable', {
     controller: foodMenuTableCtrl
 });
 
-function foodMenuTableCtrl($scope, $uibModal, foodMenuDataService) {
+function foodMenuTableCtrl($scope, $uibModal, foodMenuDataService, localStorageService) {
     $scope.dataService = foodMenuDataService;
-    $scope.order = '';
+
+    const storageSort = localStorageService.getFromStorage('tableSort');
+    if (storageSort) {
+        $scope.order = storageSort;
+    } else {
+        $scope.order = '';
+    }
 
     $scope.setOrderBy = function (order) {
         switch ($scope.order) {
@@ -20,9 +26,10 @@ function foodMenuTableCtrl($scope, $uibModal, foodMenuDataService) {
             default:
                 $scope.order = '+' + order;
         }
-    }
+        localStorageService.addToStorage('tableSort', $scope.order);
+    };
 
-    this.openComponentModal = function (title, ingredients) {
+    this.openIngredientsDialog = function (title, ingredients) {
         $uibModal.open({
             animation: true,
             component: 'ingredientsDialog',

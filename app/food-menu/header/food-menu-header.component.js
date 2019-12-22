@@ -7,12 +7,18 @@ foodMenu.component('foodMenuHeader', {
     controller: foodMenuHeaderCtrl
 });
 
-function foodMenuHeaderCtrl($scope, foodMenuDataService) {
-    $scope.filter = {
-        title: '',
-        rating: '',
-        price: ''
-    };
+function foodMenuHeaderCtrl($scope, foodMenuDataService, localStorageService) {
+    const storageFilter = localStorageService.getFromStorage('headerFilter');
+    if (storageFilter) {
+        $scope.filter = storageFilter;
+    } else {
+        $scope.filter = {
+            title: '',
+            rating: '',
+            price: ''
+        };
+    }
+
     this.clearFilters = () => {
         $scope.filter.title = '';
         $scope.filter.rating = '';
@@ -24,6 +30,7 @@ function foodMenuHeaderCtrl($scope, foodMenuDataService) {
         this.filter();
     };
     this.filter = () => {
+        localStorageService.addToStorage('headerFilter' ,$scope.filter);
         foodMenuDataService.setFilter({...$scope.filter});
     }
 }

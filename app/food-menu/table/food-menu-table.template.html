@@ -23,7 +23,7 @@
             <tr ng-repeat="item in dataService.getMenuList() | filter:dataService.filter | orderBy:order track by item.id">
                 <td>
                     <span class="app-food-title"
-                          ng-click="$ctrl.openComponentModal(item.title, item.ingredients)">
+                          ng-click="$ctrl.openIngredientsDialog(item.title, item.ingredients)">
                         {{item.title}}
                     </span>
                 </td>
