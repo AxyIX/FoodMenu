@@ -24,6 +24,7 @@ function foodMenuTableCtrl($scope, $uibModal, foodMenuDataService, localStorageS
             default:
                 $scope.order = '+' + order;
         }
+        document.querySelector('.app-main-wrapper').scrollTo(0, 0);
         localStorageService.addToStorage('tableSort', $scope.order);
     };
 
