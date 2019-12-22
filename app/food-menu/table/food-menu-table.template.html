@@ -20,7 +20,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="item in dataService.getMenuList() | filter:dataService.filterValue | orderBy:order track by item.id">
+            <tr ng-repeat="item in dataService.getMenuList() | filter:dataService.filter | orderBy:order track by item.id">
                 <td>{{item.title}}</td>
                 <td>{{item.price}}</td>
                 <td>{{item.rating}}</td>

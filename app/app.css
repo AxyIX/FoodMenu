@@ -32,13 +32,13 @@ food-menu {
   padding-bottom: 8px;
   display: flex;
   justify-content: center;
-  height: 50px;
+  height: 46px;
 }
 
 .app-table-header th{
   position: sticky !important;
   background-color: white;
-  top: 51px;
+  top: 47px;
   z-index: 1;
   user-select: none;
   -moz-user-select: none;
@@ -54,6 +54,10 @@ food-menu {
 .app-filters-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.app-filters-wrapper :not(:last-child) {
+  margin-right: 10px;
 }
 
 .app-file-uploader-wrapper {

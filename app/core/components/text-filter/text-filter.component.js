@@ -4,10 +4,12 @@ angular.module('appComponents').component('textFilter', {
     templateUrl: 'core/components/text-filter/text-filter.template.html',
     bindings: {
         value: '=',
-        label: '<'
+        label: '<',
+        onReset: '&'
     },
     controller: textFilterCtrl
 });
 
-function textFilterCtrl($scope) {
+function textFilterCtrl() {
+
 }
